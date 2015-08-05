@@ -28,6 +28,17 @@ run_cassava.py --initdb --initconfig
 
 This will immediately start the Cassava web UI which can be accessed at http://localhost:5000. Add VirusTotal or OpenDNS API keys to cassava_config.py and restart (ctrl-c then re-run script) to enable those APIs.
 
+The auto-generated cassava_config.py template will look like this:
+
+```PYTHON
+DB_PATH = 'sqlite:///cassava.db'
+OPENDNS_APIKEY = ''
+VT_API_KEY = ''
+PROXIES = {'http_proxy' : None, 'https_proxy' : None}
+```
+
+Add your VirusTotal API key and OpenDNS if you've got one. This is technically optional, but you won't get much out of Cassava without it.
+
 # Examples
 
 Active whois lookups:
@@ -43,4 +54,12 @@ Out[2]:
  'whois_server': [u'whois.markmonitor.com']}
 ```
 
+# Roadmap
 
+* Add DomainTools API
+* Support full VirusTotal API
+* Add more built-in active tools (nmap, traceroute, ???)
+* Add export functions (to JSON, CSV, and possibly STIX or related formats)
+* Change web UI to override Scrypture defaults
+* Add historical analysis capabilities, better management tools
+* Come up with a cool logo
