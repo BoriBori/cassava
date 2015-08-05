@@ -64,9 +64,9 @@ class WebAPI(webapi.WebAPI):
             ### VirusTotal ###
             try:
                 if cassava.utils.is_ip(domain):
-                    sec_info.update(cassava.virustotal.get_ip_report(domain)[domain])
+                    sec_info.update(cassava.virustotal.get_ip_report(domain)[0])
                 else:
-                    sec_info.update(cassava.virustotal.get_domain_report(domain)[domain])
+                    sec_info.update(cassava.virustotal.get_domain_report(domain)[0])
                 sec_info['vtlink'] = '<a href="{}">VirusTotal</a>'.format(sec_info['permalink'])
             except:
                 print "VirusTotal problems. Valid API key?"
