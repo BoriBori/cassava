@@ -12,7 +12,7 @@ source venv/bin/activate
 
 Git clone and install:
 ```
-git clone sdfgdkjfklsdjfklsdfjlksd
+git clone https://github.com/BechtelCIRT/cassava.git
 python cassava/setup.py install
 ```
 
@@ -42,4 +42,5 @@ Out[2]:
     ...
  'whois_server': [u'whois.markmonitor.com']}
 ```
+
 
