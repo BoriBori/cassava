@@ -49,6 +49,7 @@ if __name__ == '__main__':
     SCRYPTURE_PASSWORD = "Nothing"
 
     try:
+        sys.path.insert(0, os.getcwd())
         import cassava_config
         vt_key_present = cassava_config.VT_API_KEY
         opendns_key_present = cassava_config.OPENDNS_APIKEY
